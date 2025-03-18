@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    /* font-family: "Lora", serif; */
+}
+
+body{
+    max-width: 100%;
+    height: 100vh;
+    background:url('assets/img/mountain.jpg') center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Adjust the opacity (0.3 = 30%) */
+    z-index: -1;
+}
+
+.title h1{
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    font-family: "Lora", serif;
+    text-transform: capitalize;
+    letter-spacing: 1.8px;
+}
+
+.clock{
+    display: flex;
+    gap: 40px;
+}
+
+.clock .numbers{
+    width: 120px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    font-size: 30px;
+    position: relative;
+}
+
+.clock .numbers h1{
+    padding: 12px 0 0 0;
+}
+
+.clock span{
+    width:100%;
+    position: absolute;
+    background: #000000;
+    font-size: 17px;
+    bottom: 0;
+    padding: 5px 10px 5px 10px;
+    text-transform: uppercase;
+}
+
+.clock #ampm{
+    width: 120px;
+    min-height: 120px;
+    color: #fff;
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center;
+    padding: 12px 0 0 0;
+}
+
+/*  MEDIA QUERY */
+@media screen and (max-width:767px){
+    .title h1{
+        font-size: 40px;
+    }
+
+    .clock{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .clock .numbers{
+        width: 100px;
+        min-height: 100px;
+        font-size: 20px;
+    }
+
+    .clock span{
+        font-size: 15px;
+    }
+
+    .clock #ampm{
+        width: 100px;
+        min-height: 100px;
+        font-size: 35px;
+    }
+}
